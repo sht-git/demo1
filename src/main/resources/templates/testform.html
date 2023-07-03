@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>测试form</title>
+</head>
+<body>
+        <!-- <form th:action="@{/testAdd}" method="post">  使用thymeleaf方式-->
+        <form action="/testAdd" method="post">
+            用     户 ：<input type="text" name="user_name"/><br/>
+            密     码 ：<input type="password" name="password"/><br/>
+            <br/>
+            <!--radio 表示单选-->
+            喜欢的季节： <input type="radio" name="season" value="spring" />春天
+                        <input type="radio" name="season" value="summer" checked="checked" />夏天  <!--表示默认选择-->
+                        <input type="radio" name="season" value="autumn" />秋天
+                        <input type="radio" name="season" value="winter" />冬天 <br/>
+                        <br/>
+            <!--checkbox 表示多选-->
+            球      队 ：<input type="checkbox" name="team" value="Brazil"/>巴西
+                         <input type="checkbox" name="team" value="German" checked="checked"/>德国
+                         <input type="checkbox" name="team" value="France"/>法国
+                         <input type="checkbox" name="team" value="China" checked="checked"/>中国
+                         <input type="checkbox" name="team" value="Italian"/>意大利 <br/>
+                         <br/>
+            <!--select 表示下拉框-->
+            爱      好 ：<select name="interesting">
+                             <option value="swimming">游泳</option>
+                             <option value="running">跑步</option>
+                             <option value="shooting" selected="selected">射击</option>
+                             <option value="skating">溜冰</option>
+                         </select> <br/>
+            <br/>
+            <!--按钮-->
+            <button type="button">普通按钮</button>
+            <button type="reset">重置按钮</button>
+            <button type="submit">提交按钮</button><br/>
+
+            <br/>
+
+            <input type="submit" value="提交"/>
+        </form>
+</body>
+</html>
